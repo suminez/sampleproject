@@ -1,0 +1,111 @@
+<!--free front end bootstrap content delivery network: getbootstrap.com maxcdn code-->
+<!--by using bootstarp to get responsive view , container:fixed width,  container-fluid:use max width, grid:12 colon in screen: .col-extra small device:789px,.colsm, .colmb:778,.colxl-- mob phone<568px-->
+    <html>
+        <head>
+            <meta charset="UTF-8">
+                      
+                <style>
+                    body {font-family: Arial, Helvetica, sans-serif;}
+                    
+                    /* Full-width input fields */
+                    input[type=text], input[type=password] {
+                      width: 30%;
+                      padding: 12px; 
+                      margin:8px 0;
+                      display: inline-block;
+                      border: 1px solid #ccc;
+                      box-sizing: border-box;
+                    }
+                    
+                    /* Set a style for all buttons */
+                    button {
+                      background-color: #a41de2;
+                      color: white;
+                      padding: 14px 20px;
+                     
+                      border: none;
+                      cursor: pointer;
+                      width: 10%;
+                      margin:8px 0;
+                      margin-left:80px;
+                      margin-right: auto;
+                    }
+                    
+                    button:hover {
+                      opacity: 0.8;
+                    }
+                    
+                                     
+                    /* The Modal (background) */
+                    .modal {
+                      display: none; /* Hidden by default */
+                      position: fixed; /* Stay in place */
+                      z-index: 1; /* Sit on top */
+                      left: 0;
+                      top: 0;
+                      width: 50%; /* Full width */
+                      height: 50%; /* Full height */
+                      overflow: auto; /* Enable scroll if needed */
+                      background-color: rgb(0,0,0); /* Fallback color */
+                      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                      padding-top: 60px;
+                    }
+                    
+                    /* Modal Content/Box */
+                    .modal-content {
+                      background-color: #fefefe;
+                      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                      border: 1px solid #888;
+                      width: 80%; /* Could be more or less, depending on screen size */
+                    }
+                    
+                    /* The Close Button (x) */
+                    .close {
+                      position: absolute;
+                      right: 25px;
+                      top: 0;
+                      color: #000;
+                      font-size: 35px;
+                      font-weight: bold;
+                    }
+                    
+                    .close:hover,
+                    .close:focus {
+                      color: red;
+                      cursor: pointer;
+                    }
+                    
+                   
+                 
+                    </style>
+              
+            <title></title>
+        </head>
+    
+        <body>
+            <h1>Login Form</h1>
+            <div class="container">
+                <body >
+                    <form action="", method="post">
+                        {% csrf_token %}
+
+
+                        <label for="username"><b>User Name</b></label>
+                        <input type="text" name="username"><br>
+            
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" name="password"><br>
+            
+                    <button type="submit" >Login</button>
+            
+                    </form>
+                    {% for message in messages %}
+                    <h2>{{message}}</h2>
+                    {% endfor %}
+                </body>
+                
+            </div>
+            
+        </body>
+    </html>
+    
